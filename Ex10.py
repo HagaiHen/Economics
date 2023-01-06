@@ -72,6 +72,12 @@ def divideBudget (list1, list2, list3, budget):
 
 if __name__ == '__main__':
 
+    # list1 = [30, 0, 0]
+    # list2 = [0, 0, 30]
+    # list3 = [0, 0, 30]
+    #
+    # print("The chosen Budget is:", divideBudget(list1, list2, list3, 30))
+
     list1 = [30, 0, 0]
     list2 = [0, 15, 15]
     list3 = [0, 15, 15]
