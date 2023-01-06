@@ -9,7 +9,7 @@ def add2votes(c, t, n):
     return ans
 
 
-def fun (list1, list2, list3, budget):
+def divideBudget (list1, list2, list3, budget):
     iter = 0
 
     # Range of t
@@ -70,12 +70,10 @@ def fun (list1, list2, list3, budget):
     print()
     return ans
 
-
-
-
-
 if __name__ == '__main__':
+
     list1 = [30, 0, 0]
     list2 = [0, 15, 15]
     list3 = [0, 15, 15]
-    print("The chosen Budget is:", fun(list1, list2, list3, 30))
+
+    print("The chosen Budget is:", divideBudget(list1, list2, list3, 30))
