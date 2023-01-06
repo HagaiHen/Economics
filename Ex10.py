@@ -2,7 +2,7 @@
 def median (list):
     return list[int(len(list)/2)]
 
-def add2votes(c, t, n):
+def addVotes(c, t, n):
     ans = []
     for i in range(n-1):
         ans.append((i+1)*t*c) # Linear function
@@ -29,7 +29,7 @@ def divideBudget (list1, list2, list3, budget):
 
         print("\n ======================================= Iter # " + str(iter) +"\n")
         print("t = ", t)
-        votes = add2votes(budget, t, 3)
+        votes = addVotes(budget, t, 3)
         print("Added Votes ", votes)
         for i in range(2):
             list1.append(votes[i])
