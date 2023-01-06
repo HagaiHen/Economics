@@ -5,12 +5,14 @@ def median (list):
 def add2votes(c, t, n):
     ans = []
     for i in range(n-1):
-        ans.append((i+1)*t*c)
+        ans.append((i+1)*t*c) # Linear function
     return ans
 
 
 def fun (list1, list2, list3, budget):
     iter = 0
+
+    # Range of t
     left = 0
     right = 1
 
@@ -20,6 +22,8 @@ def fun (list1, list2, list3, budget):
     OriginalList1 = list(list1)
     OriginalList2 = list(list2)
     OriginalList3 = list(list3)
+
+    ans = []
 
     while sumOfMedians != budget:
 
@@ -44,20 +48,27 @@ def fun (list1, list2, list3, budget):
 
         print("Sum of Medians: ", sumOfMedians)
 
-        if sumOfMedians > budget:
+        if sumOfMedians > budget: # we want to
             right = t
             t = (right + left)/2
         else:
             if sumOfMedians < budget:
                 left = t
                 t = (right + left) / 2
+            else:
+                ans.append(median(list1))
+                ans.append(median(list2))
+                ans.append(median(list3))
 
         list1 = list(OriginalList1)
         list2 = list(OriginalList2)
         list3 = list(OriginalList3)
+
         iter += 1
 
-    return t
+
+    print()
+    return ans
 
 
 
@@ -67,4 +78,4 @@ if __name__ == '__main__':
     list1 = [30, 0, 0]
     list2 = [0, 15, 15]
     list3 = [0, 15, 15]
-    fun(list1, list2, list3, 30)
+    print("The chosen Budget is:", fun(list1, list2, list3, 30))
